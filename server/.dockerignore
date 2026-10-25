@@ -1,0 +1,8 @@
+# Keep the image small: venvs, dependencies and caches are rebuilt or not needed
+djangoenv/
+.venv/
+**/__pycache__/
+frontend/node_modules/
+database/
+djangoapp/microservices/
+static/
