@@ -28,17 +28,17 @@ SECRET_KEY =\
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
+# Lab URLs change every session (theianext-1, theiadockernext-1, ...),
+# so trust any Skills Network proxy subdomain.
 ALLOWED_HOSTS = [
     'localhost',
     '127.0.0.1',
-    ('zakariaboull-8000.theianext-1-labs-prod-misc-tools-us-east-0'
-     '.proxy.cognitiveclass.ai'),
+    '.proxy.cognitiveclass.ai',
 ]
 CSRF_TRUSTED_ORIGINS = [
     'http://localhost:8000',
     'http://127.0.0.1:8000',
-    ('https://zakariaboull-8000.theianext-1-labs-prod-misc-tools-us-east-0'
-     '.proxy.cognitiveclass.ai'),
+    'https://*.proxy.cognitiveclass.ai',
 ]
 
 REST_FRAMEWORK = {
